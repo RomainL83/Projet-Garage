@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="menu">
+            <div class="logo">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo">
+            </div>
+            <div class="user-login">
+                <a href="/login" class="login-link">
+                    <img src="{{ asset('img/bonhomme-connexion.png') }}" alt="Icône de connexion">
+                    Se connecter
+                </a>
+            </div>
+
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a id="open-popin-vehicule" href="#vehicules">Nos Véhicules d'Occasion</a></li>
+                    <li><a href="#contact">Contactez-Nous</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="vehicle-search-menu" class="hidden">
+            <div class="search-container">
+                <h2>Recherche de Véhicules d'Occasion</h2>
+                <label for="marques">Marques:</label>
+                <select id="marques">
+                    <!-- Options pour les marques -->
+                </select>
+                <label for="carburant">Carburant:</label>
+                <select id="carburant">
+                    <!-- Options pour le carburant -->
+                </select>
+                <label for="prix">Prix:</label>
+                <input type="range" id="prix" min="0" max="1000000" step="1000">
+                <span id="prix-label">0 € - 1 000 000 €</span>
+                <button id="rechercher">Rechercher</button>
+            </div>
+        </div>
+
+        {% block body %}
+        
+        
+        {% endblock %}
+
+        <script src="{{ asset('js/search.js') }}"></script>
+    </body>
+</html>

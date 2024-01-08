@@ -1,0 +1,107 @@
+/* public/css/styles.css */
+
+body {
+    background-image: url('../img/background.jpg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout le contenu */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image en arrière-plan pour éviter le défilement avec le contenu */
+}
+/* Ajoute une bordure autour des éléments de la liste du menu */
+.menu-links li {
+    margin-right: 20px; /* Espacement entre les éléments */
+    padding: 5px 10px; /* Espacement intérieur des éléments */
+    list-style-type: none; /* retire les puces */
+    transition: 0.3s ease-in-out; /* transition d'effet */
+    margin-top: 0.5rem;
+
+}
+
+.menu-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-links li:hover {
+    translate: 5px; /* genere un effet */
+}
+
+/* Styles pour la barre d'en-tête (header) */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles pour le lien de connexion */
+.login-link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Styles pour l'icône de connexion */
+.login-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+/* Styles pour le menu de recherche de véhicules (masqué par défaut) */
+#vehicle-search-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Ajustez la position verticale selon vos besoins */
+    right: 10px; /* Ajustez la position horizontale selon vos besoins */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Styles pour les éléments du menu de recherche */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Styles pour la barre de défilement des prix */
+#prix {
+    width: 100%;
+}
+
+/* ... Autres styles personnalisés selon vos besoins ... */
+/* Styles pour la fenêtre modale */
+#vehicle-search-menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+}
+/* Styles pour la classe "hidden" qui masque la fenêtre modale */
+.hidden {
+    display: none;
+}
+/* Style pour les champs de connexion */
+.login input {
+    padding:20px;
+    width:200px;
+}
+.login label {
+    font-size: 18px;
+    color:#fff
+}
+.login {
+    display: flex;
+    flex-direction: column;
+}
+#buttonSubmit {
+    margin-top: 20px; cursor: pointer;
+}
